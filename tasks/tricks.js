@@ -1,21 +1,5 @@
 // ...
 (function () {
-  console.log(2 && 1 && null && 0 && undefined); // null
-});
-
-
-
-// ...
-(function () {
-  console.log(+false); // 0
-  console.log(+true); // 1
-  console.log(+null); // 0
-});
-
-
-
-// ...
-(function () {
   console.log(idVar);
   var idVar = 'str'; // undefined
 

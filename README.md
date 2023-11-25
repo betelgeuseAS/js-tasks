@@ -5142,3 +5142,54 @@ The condition within the `if` statement checks whether the value of `!typeof ran
 
 </p>
 </details>
+
+---
+
+###### 156. What's the output?
+
+```js
+console.log(2 && 1 && null && 0 && undefined); // null
+```
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: `null`
+
+OR `||` returns the first truthy value or the last one if no truthy value is found.  
+AND `&&` returns the first falsy value or the last value if none were found.
+
+</p>
+</details>
+
+---
+
+###### 155. What's the output?
+
+```js
+console.log(+false); // 0
+console.log(+true); // 1
+console.log(+null); // 0
+console.log(+undefined); // NaN
+console.log(+NaN); // NaN
+```
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: It returns in order `0 - 1 - 0 - NaN - NaN`
+
+Operator `+` before value convert this value into number.
+
+</p>
+</details>
+
+---
+
+###### 155. What's the output?
+```js```
+<details><summary><b>Answer</b></summary>
+<p>
+#### Answer: ``
+</p>
+</details>
