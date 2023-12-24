@@ -2337,5 +2337,228 @@
 
 // ...
 (function () {
+  const aob = [
+    { framework: 'React.JS', website: 'Paypal' },
+    { framework: 'React.JS', website: 'Tesla' },
+    { framework: 'Angular', website: 'Google' },
+    { framework: 'Vue.JS', website: 'Vue' },
+    { framework: 'JavaScript', website: 'inblack67' },
+  ]
+
+  const superAob = (data, victim) => {
+    const obj = {};
+
+    data.forEach((data) => {
+      if(data.hasOwnProperty(victim)) {
+        if (obj[data[victim]]) {
+          obj[data[victim]]++;
+        } else {
+          obj[data[victim]] = 1;
+        }
+      }
+    })
+
+    let superArrayOfObjects = [];
+
+    for (const key in obj) {
+      superArrayOfObjects = [...superArrayOfObjects, { victim: key, count: obj[key]}];
+    }
+
+    return superArrayOfObjects;
+  }
+
+  console.log(superAob(aob, 'framework'));
+
+  // output:-
+  // [
+  //   { victim: 'React.JS', count: 2 },
+  //   { victim: 'Angular', count: 1 },
+  //   { victim: 'Vue.JS', count: 1 },
+  //   { victim: 'JavaScript', count: 1 }
+  // ]
+});
+
+
+
+// ...
+(function () {
+  function foo() {
+    let x = y = 0;
+
+    x++;
+    y++;
+
+    return x;
+  }
+
+  console.log(foo(), typeof x, typeof y);
+});
+
+
+
+// ...
+(function () {
+  class Rectangle {
+    constructor(height, width) {
+      this.height = height;
+      this.width = width;
+    }
+
+    constructor(width) {
+      this.width = width;
+    }
+    // Getter
+    get area() {
+      return this.calcArea();
+    }
+    // Method
+    calcArea() {
+      return this.height * this.width;
+    }
+  }
+
+  const square = new Rectangle(20, 30);
+
+  console.log(square.area); // Uncaught SyntaxError: A class may only have one constructor
+});
+
+
+
+// Event orders
+(function () {
+  function main(){
+    console.log('A');
+
+    setTimeout(
+      function print(){ console.log('B'); },0);
+
+    console.log('C');
+  }
+
+  main(); // A,C and B
+});
+
+
+
+// Floating problem
+(function () {
+  console.log(0.1 + 0.2 === 0.3);
+});
+
+
+
+// Function arrow context
+(function () {
+  function User(name, age) {
+    this.name = name;
+    this.age = age;
+
+    this.getProfile = function() {
+      // Outer function context
+      console.log(this.constructor.name); // User
+
+      return () => {
+        // Inner function context
+        console.log(this.constructor.name); // User(Get it from the outer context)
+        console.log("I'm " + this.name + ", " + this.age + " yrs old");
+      };
+    }
+  }
+
+  let user = new User('John', 25);
+  let profile = user.getProfile();
+
+  profile(); //I'm John, 25 yrs old
+});
+
+
+
+// Function context
+(function () {
+  function User(name, age) {
+    this.name = name;
+    this.age = age;
+
+    this.getProfile = function() {
+      // Outer function context
+      console.log(this.constructor.name); // User
+
+      return function() {
+        // Inner function context
+        console.log(this.constructor.name); // Window
+        console.log("I'm " + this.name + ", " + this.age + " yrs old");
+      };
+    }
+  }
+
+  var user = new User('John', 25);
+  var profile = user.getProfile();
+
+  profile(); //I'm undefined, undefined yrs old
+});
+
+
+
+// Function expression
+(function () {
+  var y = 1;
+
+  if (function f(){}) {
+    y += typeof f;
+  }
+
+  console.log(y);
+});
+
+
+
+// Function hoisted
+(function () {
+  var car = new Vehicle("Honda", "white", "2010", "UK");
+
+  console.log(car);
+
+  function Vehicle(model, color, year, country) {
+    this.model = model;
+    this.color = color;
+    this.year = year;
+    this.country = country;
+  }
+});
+
+
+
+// Function without new
+(function () {
+  function Vehicle(model, color, year, country) {
+    this.model = model;
+    this.color = color;
+    this.year = year;
+    this.country = country;
+  }
+
+  var car = Vehicle("Honda", "white", "2010", "UK");
+
+  console.log(car);
+});
+
+
+
+// Semicolon issue
+(function () {
+  function foo() {
+    return
+    {
+      message: "Hello World"
+    };
+  }
+
+  console.log(foo()); // Undefined
+});
+
+
+
+// ...
+(function () {
 
 })();
