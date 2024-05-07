@@ -386,7 +386,7 @@
 
 // Is url exists
 (function () {
-  export const urlExists = (url) => {
+  const urlExists = (url) => {
     try {
       const http = new XMLHttpRequest();
 
