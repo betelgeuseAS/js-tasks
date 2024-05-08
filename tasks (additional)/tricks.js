@@ -719,9 +719,26 @@
 
 
 
-// Disable consoles
+// Disable consoles.
 (function () {
   console.log = console.warn = console.error = () => {};
+});
+
+
+
+// ...
+(function () {
+  console.log([] + null + 1); // null1
+  console.log("foo" + + "bar"); // fooNaN (+ "bar" пробує перетворити в число, то отримуємо NaN, далі конкатинаці рядків)
+  console.log(!!"false" == !!"true"); // true
+});
+
+
+// ...
+(function () {
+  console.log("a" && "" && "c"); // ""
+  console.log("a" && "" || "c"); // "c"
+  console.log("" ?? "a"); // "" (?? працює тільки з null та undefined, всі інші falsy йього оператора не цікавлять)
 });
 
 
