@@ -743,6 +743,41 @@
 
 
 
+// Що буде виведено?
+(function () {
+  let value = 2;
+
+  function showValue() {
+    console.log(value); // 2
+  }
+
+  function wrapper() {
+    let value = 3;
+    console.log(value);
+    showValue(); // 3
+  }
+
+  wrapper();
+});
+
+
+
+// Що буде виведено?
+(function () {
+  const square = {
+    side: 5,
+    area() {
+      return this.side * this.side;
+    },
+    perimeter: () => 4 * this.side
+  };
+
+  console.log(square.area()); // 25
+  console.log(square.perimeter()); // NaN
+});
+
+
+
 // ...
 (function () {
 

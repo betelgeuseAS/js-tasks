@@ -72,6 +72,15 @@
     .then(p => p  + "d3")
     .finally(p => p + "e")
     .then(p => console.log(p)); // a2d1d3
+
+  Promise
+    .resolve(1)
+    .then(x => x + 1)
+    .then(x => { throw x; })
+    .catch(err => console.log(err)) // 2
+    .then(x => Promise.resolve(1))
+    .catch(err => console.log(err))
+    .then(x => console.log(x));  // 1
 });
 
 

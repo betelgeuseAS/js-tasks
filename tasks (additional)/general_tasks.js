@@ -2509,6 +2509,123 @@
 
 
 
+// Find Duplicate Elements in an Array.
+(function () {
+  // Variant 1. Using the indexOf() method
+  // const array = [1, 2, 3, 2, 4, 5, 4, 5];
+  // const duplicates = array.filter((item, index) => array.indexOf(item) !== index);
+  // console.log(duplicates); // [2, 4, 5]
+
+  // Variant 2. Using Set() object and has() Method
+  // const array = [1, 2, 3, 2, 4, 5, 4, 5];
+  // const uniqueElements = new Set();
+  // const duplicates = [];
+
+  // array.forEach(item => {
+  //   if (uniqueElements.has(item)) {
+  //     duplicates.push(item);
+  //   } else {
+  //     uniqueElements.add(item);
+  //   }
+  // });
+
+  // console.log(duplicates); // [2, 4, 5]
+
+  // Variant 3. Using an object
+  // const array = [1, 2, 3, 2, 4, 5, 4, 5];
+  // const elementTracker = {};
+  // const duplicates = [];
+
+  // array.forEach(item => {
+  //   if (elementTracker[item]) {
+  //     duplicates.push(item);
+  //   } else {
+  //     elementTracker[item] = true;
+  //   }
+  // });
+
+  // console.log(duplicates); // [2, 4, 5]
+
+  // Variant 4. Using some function
+  // const array = [1, 2, 3, 2, 4, 5, 4, 5];
+  // const duplicates = array.filter((item, index) => array.some((elem, idx) => elem === item && idx !== index));
+
+  // console.log(duplicates); // [2, 4, 5]
+
+  // Variant 5. Using iteration
+  // const array = [1, 2, 3, 2, 4, 5, 4, 5];
+  // let duplicates = [];
+
+  // for (let i = 0; i < array.length; i++) {
+  //     for (let j = i + 1; j < array.length; j++) {
+  //         if (array[i] === array[j]) {
+  //             // Check if the found duplicate is already in the duplicates array
+  //             if (!duplicates.includes(array[i])) {
+  //                 duplicates.push(array[i]);
+  //             }
+  //         }
+  //     }
+  // }
+
+  // console.log(duplicates); // [2, 4, 5]
+
+  // Variant 6. Using the filter() and indexOf() Methods
+  // const array = [1, 2, 3, 2, 4, 5, 4, 5];
+  // const duplicates = array.filter((item, index) => array.indexOf(item) !== index);
+  // console.log(duplicates); // [2, 4, 5]
+
+  // Variant 7. Using Nested For In Loop
+  // const array = [1, 2, 3, 2, 4, 5, 4, 5];
+  // let duplicates = [];
+
+  // for (let i in array) {
+  //     for (let j in array) {
+  //         if (array[i] === array[j] && i !== j) {
+  //             // Check if the found duplicate is already in the duplicates array
+  //             if (!duplicates.includes(array[i])) {
+  //                 duplicates.push(array[i]);
+  //                 break; // To avoid adding the same duplicate multiple times
+  //             }
+  //         }
+  //     }
+  // }
+
+  // console.log(duplicates); // [2, 4, 5]
+
+  // Variant 8. Comparing the indexes of element
+  // const array = [1, 2, 3, 2, 4, 5, 4, 5];
+  // const duplicates = [];
+
+  // array.forEach((element, index) => {
+  //   if (array.indexOf(element) !== index) {
+  //     duplicates.push(element);
+  //   }
+  // });
+
+  // console.log(duplicates); // [2, 4, 5]
+
+  // Variant 9. Using filter() Method
+  // const array = [1, 2, 3, 2, 4, 5, 4, 5];
+  // const duplicates = array.filter((item, index) => array.indexOf(item) < index);
+
+  // console.log(duplicates); // [2, 4, 5]
+
+  // Variant 10. Using a Set
+  const array = [1, 2, 3, 2, 4, 5, 4, 5];
+  const uniqueSet = new Set(array);
+  const duplicates = array.filter(item => {
+    if (uniqueSet.has(item)) {
+      uniqueSet.delete(item);
+      return false; // Not a duplicate yet, remove from Set to catch next occurrence
+    }
+    return true; // Already removed from Set, thus a duplicate
+  });
+
+  console.log(duplicates); // [2, 4, 5]
+});
+
+
+
 // ...
 (function () {
 
