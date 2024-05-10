@@ -2626,6 +2626,39 @@
 
 
 
+// Завдання: Дано масив [1, 2, 3, 4, 5]. За допомогою методу reduce отримати результат [[2,4], [1,3,5]].
+(function () {
+  const arr = [1, 2, 3, 4, 5];
+
+  const result = arr.reduce(function(acc, curr) {
+    curr % 2 === 0
+      ? acc[0].push(curr)
+      : acc[1].push(curr);
+
+    return acc;
+  }, [[], []]);
+
+  console.log(result); // [[2,4], [1,3,5]]
+});
+
+
+
+// Завдання: Відсортувати масив ['zB', 'a', 'Kb', 'za', 'KA']. Результат сортування - ['a', 'KA', 'Kb', 'za', 'zB'].
+(function () {
+  const arr = ['zB', 'a', 'Kb', 'za', 'KA'];
+
+  const result = arr.sort(function(a, b) {
+    if (a.toLowerCase() < b.toLowerCase()) return -1;
+    if (a.toLowerCase() > b.toLowerCase()) return 1;
+
+    return 0;
+  });
+
+  console.log(result); // ['a', 'KA', 'Kb', 'za', 'zB']
+});
+
+
+
 // ...
 (function () {
 
