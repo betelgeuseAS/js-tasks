@@ -2659,6 +2659,28 @@
 
 
 
+// Завдання: перевірити чи рядок містить літери або цифри.
+(function () {
+  const alphanumeric = (string) => /^[a-zA-Z0-9]+$/.test(string);
+
+  console.log(alphanumeric("test")); // true
+  console.log(alphanumeric("test123")); // true
+  console.log(alphanumeric(" ")); // false
+});
+
+
+
+// Завдання: задано рядок, повернути довжину найкоротшого слова.
+(function () {
+  const findShort = (string) => Math.min(...string.split(" ").map((item) => item.length));
+
+  console.log(findShort("test the")); // 3
+  console.log(findShort("test number")); // 4
+  console.log(findShort("a short")); // 1
+});
+
+
+
 // ...
 (function () {
 
