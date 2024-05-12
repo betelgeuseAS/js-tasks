@@ -1,10 +1,11 @@
-// The order of execution.
+// Завдання: порядок виконання.
 (function () {
   function main(){
     console.log('A');
 
-    setTimeout(
-      function print(){ console.log('B'); },0);
+    setTimeout(function print() {
+      console.log('B');
+    }, 0);
 
     console.log('C');
   }
@@ -12,7 +13,6 @@
   main();
 
   /*
-    Order:
     1. A
     2. C
     3. B
@@ -21,7 +21,7 @@
 
 
 
-// The order of execution.
+// Завдання: порядок виконання.
 (function () {
   console.log(1);
 
@@ -36,7 +36,6 @@
   console.log(7);
 
   /*
-    Order:
     1. 1
     2. 7
     3. 3
@@ -49,7 +48,7 @@
 
 
 
-// The order of execution.
+// Завдання: порядок виконання.
 (function () {
   setTimeout(() => console.log("Timeout"), 0);
 
@@ -72,7 +71,6 @@
   setTimeout(() => console.log("Timeout2"), 0);
 
   /*
-    Order:
     1. 1
     2. New promise
     3. 4
@@ -86,7 +84,7 @@
 
 
 
-// The order of execution.
+// Завдання: порядок виконання.
 (function () {
   console.log("Start");
 
@@ -112,7 +110,6 @@
   console.log("End");
 
   /*
-    Order:
     1. Start
     2. End
     3. Promise1
@@ -125,7 +122,7 @@
 
 
 
-// The order of execution.
+// Завдання: порядок виконання.
 (function () {
   console.log("Script start");
 
@@ -145,7 +142,6 @@
   console.log("Script end");
 
   /*
-    Order:
     1. Script start
     2. Script end
     3. Promise1
@@ -156,7 +152,7 @@
 
 
 
-// The order of execution.
+// Завдання: порядок виконання.
 (function () {
   setTimeout(() => {
     console.log("Timeout");
@@ -179,7 +175,6 @@
   console.log("Promise2: ", promise2);
 
   /*
-    Order:
     1. Promise1 creation
     2. Promise2 creation
     3. End

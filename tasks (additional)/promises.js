@@ -1,4 +1,4 @@
-// Написати власний promise all (Навіть збережений порядок).
+// Завдання: написати власний promise all (Навіть збережений порядок).
 (function () {
   function sleep(ms) {
     return new Promise((resolve, reject) => {
@@ -39,7 +39,7 @@
 
 
 
-// Що буде виведено?
+// ...
 (function () {
   let promise = new Promise(function (resolve, reject) {
     resolve(1);
@@ -52,7 +52,7 @@
 
 
 
-// Що буде виведено?
+// ...
 (function () {
   Promise
     .reject("a")

@@ -1,21 +1,4 @@
-// IIFE (Immediately Invoked Function Expression)
-(function () {
-  (function () {
-    // …
-  })();
-
-  (() => {
-    // …
-  })();
-
-  (async () => {
-    // …
-  })();
-});
-
-
-
-// How to detect file extension in a string
+// Вирішення: how to detect file extension in a string?
 (function () {
   const getExtensionFromPath = (filename) => {
     return filename.substring(filename.lastIndexOf(".") + 1);
@@ -26,7 +9,7 @@
 
 
 
-// How to pull url file extension out of url string
+// Вирішення: how to pull url file extension out of url string?
 (function () {
   function getUrlExtension(url) {
     return url.split(/[#?]/)[0].split('.').pop().trim();
@@ -38,7 +21,7 @@
 
 
 
-// Get width height of remote image from url
+// Вирішення: get width height of remote image from url.
 (function () {
   // Variant 1: Callback
   // const getMeta = (url, cb) => {
@@ -81,7 +64,7 @@
 
 
 
-// Read uploaded text file
+// Вирішення: read uploaded text file.
 (function () {
   const readTextFile = (file, callback) => {
     // Check if the file is a text
@@ -99,7 +82,7 @@
 
 
 
-// Get file data by url
+// Вирішення: get file data by url.
 (function () {
   const getFileDataByUrl = (url) => {
     try {
@@ -130,7 +113,7 @@
 
 
 
-// Determine file size without downloading a file
+// Вирішення: determine file size without downloading a file.
 (function () {
   // Method 1 - Synchronous XMLHttpRequest
   // function getFileSize(url) {
@@ -168,7 +151,7 @@
 
 
 
-// Remove special characters
+// Вирішення: remove special characters.
 (function () {
   const removeSpecialCharacters = (value) => {
     return value.replace(/[<>:"|?*]/g, '');
@@ -177,7 +160,7 @@
 
 
 
-// Як працювати з async/await у циклах
+// Хитрість: як працювати з async/await у циклі?
 (function () {
   // Функції для прикладу
   function delay() {
@@ -235,7 +218,7 @@
 
 
 
-// Get type and size file via fetch:
+// Вирішення: get type and size file via fetch.
 (async function () {
   const getКesolutionByUrl = async (url) => {
     return new Promise((resolve, reject) => {
@@ -273,7 +256,7 @@
 
 
 
-// Work with images: grab, get base64, get resolution
+// Вирішення: work with images: grab, get base64, get resolution.
 (function () {
   const getImageBase64 = (url) => new Promise((resolve) => {
     const img = new Image();
@@ -339,7 +322,7 @@
 
 
 
-// Singelton pattern
+// Хитрість: Singelton pattern.
 (function () {
   class Store {
     constructor() {
@@ -368,7 +351,7 @@
 
 
 
-// Use import / export in js
+// Хитрість: use import / export in js.
 (function () {
   // index.html
   // <script src="js/theme.js" type="module"></script>
@@ -384,7 +367,7 @@
 
 
 
-// Is url exists
+// Вирішення: is url exists?
 (function () {
   const urlExists = (url) => {
     try {
@@ -403,7 +386,7 @@
 
 
 
-// Await addEventListener or event
+// Вирішення: await addEventListener or event.
 (function () {
   const getMeta = async (url) => {
     const img = new Image();
