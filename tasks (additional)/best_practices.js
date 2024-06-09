@@ -1,4 +1,4 @@
-// Вирішення: how to detect file extension in a string?
+// Вирішення: визначити розширення файлу із рядка/шляху.
 (function () {
   const getExtensionFromPath = (filename) => {
     return filename.substring(filename.lastIndexOf(".") + 1);
@@ -9,7 +9,7 @@
 
 
 
-// Вирішення: how to pull url file extension out of url string?
+// Вирішення: дістати розширення файлу із url.
 (function () {
   function getUrlExtension(url) {
     return url.split(/[#?]/)[0].split('.').pop().trim();
@@ -21,9 +21,9 @@
 
 
 
-// Вирішення: get width height of remote image from url.
+// Вирішення: отримати ширину та висоту картинки по url.
 (function () {
-  // Variant 1: Callback
+  // Варіант 1: Callback
   // const getMeta = (url, cb) => {
   //   const img = new Image();
   //   img.onload = () => cb(null, img);
@@ -35,7 +35,7 @@
   //   console.log(img.naturalWidth, img.naturalHeight);
   // });
 
-  // Variant 2: Using the load Event listener (Promise):
+  // Варіант 2: Using the load Event listener (Promise):
   // const getMeta = (url) =>
   //   new Promise((resolve, reject) => {
   //     const img = new Image();
@@ -49,7 +49,7 @@
   //   console.log(img.naturalHeight + ' ' + img.naturalWidth);
   // })();
 
-  // Variant 3: Using HTMLImageElement.decode() (Promise)
+  // Варіант 3: Using HTMLImageElement.decode() (Promise)
   const getMeta = async (url) => {
     const img = new Image();
     img.src = url;
@@ -64,7 +64,7 @@
 
 
 
-// Вирішення: read uploaded text file.
+// Вирішення: прочитати завантажений файл.
 (function () {
   const readTextFile = (file, callback) => {
     // Check if the file is a text
@@ -82,7 +82,7 @@
 
 
 
-// Вирішення: get file data by url.
+// Вирішення: отримати дані файлу по url.
 (function () {
   const getFileDataByUrl = (url) => {
     try {
@@ -113,9 +113,9 @@
 
 
 
-// Вирішення: determine file size without downloading a file.
+// Вирішення: дізнатися розмір файлу без його завантаження.
 (function () {
-  // Method 1 - Synchronous XMLHttpRequest
+  // Варіант 1 - Synchronous XMLHttpRequest
   // function getFileSize(url) {
   //   var fileSize = '';
   //   var http = new XMLHttpRequest();
@@ -132,7 +132,7 @@
   //   return fileSize;
   // }
 
-  // Method 2 - Asynchronous XMLHttpRequest
+  // Варіант 2 - Asynchronous XMLHttpRequest
   function getFileSize(url) {
     var fileSize = '';
     var http = new XMLHttpRequest();
@@ -151,7 +151,7 @@
 
 
 
-// Вирішення: remove special characters.
+// Вирішення: видалити спеціальні символи.
 (function () {
   const removeSpecialCharacters = (value) => {
     return value.replace(/[<>:"|?*]/g, '');
@@ -160,7 +160,7 @@
 
 
 
-// Хитрість: як працювати з async/await у циклі?
+// Хитрість: робота з async/await у циклі.
 (function () {
   // Функції для прикладу
   function delay() {
@@ -218,7 +218,7 @@
 
 
 
-// Вирішення: get type and size file via fetch.
+// Вирішення: отримати тип та розмір файлу через fetch.
 (async function () {
   const getКesolutionByUrl = async (url) => {
     return new Promise((resolve, reject) => {
@@ -256,7 +256,7 @@
 
 
 
-// Вирішення: work with images: grab, get base64, get resolution.
+// Вирішення: робота із зображеннями: вигребти, отримати base64, отримати розширення.
 (function () {
   const getImageBase64 = (url) => new Promise((resolve) => {
     const img = new Image();
@@ -351,7 +351,7 @@
 
 
 
-// Хитрість: use import / export in js.
+// Хитрість: використання import / export в js.
 (function () {
   // index.html
   // <script src="js/theme.js" type="module"></script>
@@ -367,7 +367,7 @@
 
 
 
-// Вирішення: is url exists?
+// Вирішення: чи існує url.
 (function () {
   const urlExists = (url) => {
     try {
@@ -386,7 +386,7 @@
 
 
 
-// Вирішення: await addEventListener or event.
+// Вирішення: await addEventListener або event.
 (function () {
   const getMeta = async (url) => {
     const img = new Image();

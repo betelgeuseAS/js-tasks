@@ -1,5 +1,7 @@
-// Завдання: анаграма.
-// Визначити чи є рядок анаграмою. Складається з тих самих символів (listen -> silent).
+/*
+  Завдання: визначити чи є рядок анаграмою.
+  Складається з тих самих символів (listen -> silent).
+*/
 (function () {
   // Варіант 1
   // function aclean(arr) {
@@ -50,8 +52,10 @@
 
 
 
-// Завдання: паліндромом.
-// Визначити чи є рядок паліндромом. Послідовність символів, що однаково читається в обох напрямках.
+/*
+  Завдання: визначити чи є рядок паліндромом.
+  Послідовність символів, що однаково читається в обох напрямках.
+*/
 (function () {
   // Варіант 1
   // function palindrome(str) {
@@ -78,8 +82,10 @@
 
 
 
-// Завдання: фібоначчі.
-// Вывести n-е число Фибоначчи. Это ряд чисел, где каждое последующее является сумой двух предодущих.
+/*
+  Завдання: вивести n-е число Фібоначчі.
+  Це ряд чисел де кожне наступне число є сумою двох попередніх.
+*/
 (function () {
   // Варіант 1
   // const fibonacci = num => {
@@ -213,14 +219,16 @@
 
 
 
-// 7.Завдання: FizzBuzz.
-// Потрібно написати функцію, що виводить у консоль числа від 1 до n, де n - це ціле число, яка функція приймає як
-// параметр, з такими умовами:
-// виведення fizz замість чисел, кратних 3;
-// виведення buzz замість чисел, кратних 5;
-// виведення fizzbuzz замість чисел, кратних як 3, і 5.
+/*
+  Завдання: FizzBuzz.
+  Потрібно написати функцію, що виводить у консоль числа від 1 до n, де n - це ціле число, яка функція приймає як
+  параметр, з такими умовами:
+    виведення fizz замість чисел, кратних 3;
+    виведення buzz замість чисел, кратних 5;
+    виведення fizzbuzz замість чисел, кратних як 3, і 5.
+*/
 (function () {
-  // Variant 1
+  // Варіант 1
   // const fizzBuzz = num => {
   //   for(let i = 1; i <= num; i++) {
   //     if(i % 3 === 0 && i % 5 === 0) {
@@ -237,7 +245,7 @@
   //
   // fizzBuzz(15)
 
-  // Variant 2
+  // Варіант 2
   const fizzBuzz = num => {
     let result = '';
 
@@ -252,9 +260,11 @@
 
 
 
-// Завдання: пошук голосних.
-// Потрібно написати функцію, яка приймає рядок як аргумент і повертає кількість голосних, які містяться в рядку.
-// Голосними є "a", "e", "i", "o", "u".
+/*
+  Завдання: пошук голосних.
+  Потрібно написати функцію, яка приймає рядок як аргумент і повертає кількість голосних, які містяться в рядку.
+  Голосними є "a", "e", "i", "o", "u".
+*/
 (function () {
   // Варіант 1
   // const findVowels = str => {
@@ -285,9 +295,11 @@
 
 
 
-// Завдання: унікальність всіх символів в рядку.
-// Напишіть функцію, яка визначає чи унікальні всі символи в рядку. Реєстр повинен враховуватися: 'a' та 'A' різні
-// символи.
+/*
+  Завдання: унікальність всіх символів в рядку.
+  Напишіть функцію, яка визначає чи унікальні всі символи в рядку. Реєстр повинен враховуватися: 'a' та 'A' різні
+  символи.
+*/
 (function () {
   function isUnique(str) {
     // Варіант 1
@@ -326,9 +338,11 @@
 
 
 
-// Завдання: плоский масив.
-// Напишіть функцію, що приймає масив із вкладеними масивами і розпакуйте в результуючий плоский масив.
-// У результаті маємо отримати новий одновимірний масив.
+/*
+  Завдання: плоский масив.
+  Напишіть функцію, що приймає масив із вкладеними масивами і розпакуйте в результуючий плоский масив.
+  У результаті маємо отримати новий одновимірний масив.
+*/
 (function () {
   function flatten(array) {
     const res = []
@@ -355,8 +369,10 @@
 
 
 
-// Завдання: видалення всіх значень, що повторюються, в рядку.
-// Напишіть функцію, яка приймає рядок і повертає новий, у якому всі символи, що дублюються, будуть видалені.
+/*
+  Завдання: видалення всіх значень в рядку, що повторюються.
+  Напишіть функцію, яка приймає рядок і повертає новий, у якому всі символи, що дублюються, будуть видалені.
+*/
 (function () {
   function removeDupes(str) {
     // Варіант 1
@@ -385,9 +401,11 @@
 
 
 
-// Завдання: який рядок зустрічається найчастіше?
-// Напишіть функцію, яка приймає масив рядків і повертає рядок, що найчастіше зустрічається, у цьому масиві. Якщо таких
-// рядків кілька, то потрібно повернути перший, йдучи зліва на право.
+/*
+  Завдання: який рядок зустрічається найчастіше?
+  Напишіть функцію, яка приймає масив рядків і повертає рядок, що найчастіше зустрічається, у цьому масиві. Якщо таких
+  рядків кілька, то потрібно повернути перший, йдучи зліва на право.
+*/
 (function () {
   function highestFrequency(array) {
     const map = {}
@@ -421,9 +439,11 @@
 
 
 
-// Завдання: чи перевернуто рядок?
-// Напишіть функцію, яка приймає 2 рядки. Поверніть true, якщо рядки є перевернутим варіантом один одного. Інакше
-// поверніть false.
+/*
+  Завдання: чи перевернуто рядок?
+  Напишіть функцію, яка приймає 2 рядки. Поверніть true, якщо рядки є перевернутим варіантом один одного. Інакше
+  поверніть false.
+*/
 (function () {
   function isStringRotated(source, test) {
     // Варіант 1
@@ -452,8 +472,10 @@
 
 
 
-// Завдання: чи є масив підмножиною іншого масиву?
-// Напишіть функцію, яка перевіряє, чи є другий масив підмножиною першого. Тобто чи є елементи другого масиву у першому.
+/*
+  Завдання: чи є масив підмножиною іншого масиву?
+  Напишіть функцію, яка перевіряє, чи є другий масив підмножиною першого. Тобто чи є елементи другого масиву у першому.
+*/
 (function () {
   function arraySubset(source, subset) {
     if (source.length < subset.length) {
@@ -478,8 +500,7 @@
 
 
 
-// Завдання: анаграми.
-// Напишіть функцію, яка перевіряє, чи всі елементи в масиві є анаграмами один одного.
+// Завдання: перевірте, чи всі елементи в масиві є анаграмами один одного.
 (function () {
   function allAnagrams(array) {
     const sorted = array.map(str => str.split('').sort().join(''))
@@ -499,12 +520,15 @@
 
 
 
-// Завдання: перевернути матрицю 3х3.
-// Напишіть функцію, яка приймає матрицю 3х3 і перевертає на 90 градусів за годинниковою стрілкою.
-// Додатково: Напишіть ще дві функції, які перевертають матрицю на 180 і 270 градусів.
-// [1, 2, 3]    [7, 4, 1]
-// [4, 5, 6] -> [8, 5, 2]
-// [7, 8, 9]    [9, 6, 3]
+/*
+  Завдання: перевернути матрицю 3х3.
+  Напишіть функцію, яка приймає матрицю 3х3 і перевертає на 90 градусів за годинниковою стрілкою.
+  Додатково: Напишіть ще дві функції, які перевертають матрицю на 180 і 270 градусів.
+
+  [1, 2, 3]    [7, 4, 1]
+  [4, 5, 6] -> [8, 5, 2]
+  [7, 8, 9]    [9, 6, 3]
+*/
 (function () {
   const matrix = [
     [1, 2, 3],
@@ -537,9 +561,11 @@
 
 
 
-// Завдання: простий пошук.
-// Напишіть функцію, яка приймає відсортований масив з числами та числом. Необхідно повернути індекс числа, якщо
-// воно є у масиві. Інакше повернути `-1`.
+/*
+  Завдання: простий пошук.
+  Напишіть функцію, яка приймає відсортований масив з числами та числом. Необхідно повернути індекс числа, якщо
+  воно є у масиві. Інакше повернути `-1`.
+*/
 (function () {
   // Time: O(n)
   function search(array, target) {
@@ -592,9 +618,11 @@
 
 
 
-// Завдання: збалансовані дужки.
-// Напишіть функцію, яка перевірить рядок на збалансованість дужок: `{}, (), []`. Повернути `true` якщо вони
-// збалансовані, інакше `false`.
+/*
+  Завдання: збалансовані дужки.
+  Напишіть функцію, яка перевірить рядок на збалансованість дужок: `{}, (), []`. Повернути `true` якщо вони
+  збалансовані, інакше `false`.
+*/
 (function () {
   function isBalanced(string) {
     const start = '({['
@@ -634,9 +662,11 @@
 
 
 
-// Алгоритм: черга з О(1) складністю операцій.
-// Створіть чергу, в якій будуть реалізовані операції на додавання елементів в кінець черги, видалення першого
-// елемента та обчислення розміру черги зі складністю алгоритму `О(1)`.
+/*
+  Алгоритм: черга з О(1) складністю операцій.
+  Створіть чергу, в якій будуть реалізовані операції на додавання елементів в кінець черги, видалення першого
+  елемента та обчислення розміру черги зі складністю алгоритму `О(1)`.
+*/
 (function () {
   // Варіант 1
   class LinkedList {
@@ -724,8 +754,10 @@
 
 
 
-// Завдання: Deep Equal.
-// Напишіть функцію, яка перевірятиме на “глибоку” рівність 2 вхідних параметрів.
+/*
+  Завдання: Deep Equal.
+  Напишіть функцію, яка перевірятиме на “глибоку” рівність 2-x вхідних параметрів.
+*/
 (function () {
   function deepEqual(a, b) {
     if (Number.isNaN(a) && Number.isNaN(b)) {
@@ -767,8 +799,7 @@
 
 
 
-// Завдання: своя функція bind.
-// Реалізуйте функцію bind.
+// Завдання: реалізуйте власну функцію bind.
 (function () {
   Function.prototype.myBind = function(context, ...args) {
     return (...rest) => {
@@ -787,8 +818,10 @@
 
 
 
-// Завдання: універсальна сума (Каррінг).
-// Напишіть функцію, що складає 2 числа. Працювати функція повинна як показано на прикладах.
+/*
+  Завдання: універсальна сума (carrying).
+  Напишіть функцію, що складає 2 числа. Працювати функція повинна як показано на прикладах.
+*/
 (function () {
   function add(a, b) {
     if (!a) {
@@ -819,8 +852,7 @@
 
 
 
-// Завдання: GroupBy.
-// Напишіть функцію groupBy.
+// Завдання: напишіть функцію groupBy.
 (function () {
   function groupBy(array, fn) {
     return array.reduce((res, current) => {
@@ -863,14 +895,17 @@
 
 
 
-// Завдання: створити функцію id яка буде повертати значення на один більше. Наприклад:
-// console.log(id()); // 0
-// console.log(id()); // 1
-// console.log(id()); // 2
-// console.log(id()); // 3
-// console.log(id()); // 4
+/*
+  Завдання: створити функцію id яка буде повертати значення на один більше.
+  Наприклад:
+    console.log(id()); // 0
+    console.log(id()); // 1
+    console.log(id()); // 2
+    console.log(id()); // 3
+    console.log(id()); // 4
+*/
 (function () {
-  // Variant 1
+  // Варіант 1
   // function id() {
   //   let id = Symbol.for("id");
   //
@@ -883,7 +918,7 @@
   // console.log(id());
   // console.log(id());
 
-  // Variant 2
+  // Варіант 2
   function getId() {
     let id = 0;
 
@@ -904,13 +939,13 @@
 
 // Завдання: видалити дублікати в масиві.
 (function () {
-  // Method 1 - Use Set.
+  // Варіант 1 - Use Set.
   // let chars = ['A', 'B', 'A', 'C', 'B'];
   // let uniqueChars = [...new Set(chars)];
   //
   // console.log(uniqueChars);
 
-  // Method 2 - Using the indexOf() and filter() methods.
+  // Варіант 2 - Using the indexOf() and filter() methods.
   // let chars = ['A', 'B', 'A', 'C', 'B'];
   //
   // let dupChars = chars.filter((element, index) => {
@@ -919,7 +954,7 @@
   //
   // console.log(dupChars);
 
-  // Method 3 - Using the includes() and forEach() methods.
+  // Варіант 3 - Using the includes() and forEach() methods.
   let chars = ['A', 'B', 'A', 'C', 'B'];
 
   let uniqueChars = [];
@@ -936,10 +971,10 @@
 
 // Завдання: перша літера верхнього регістру.
 (function () {
-  // Method 1
+  // Варіант 1
   // const capitalizeFirstLetter = (string) => string[0].toUpperCase() + ststringr.substr(1);
 
-  // Method 2
+  // Варіант 2
   const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 });
 
@@ -947,7 +982,7 @@
 
 // Завдання: сортування.
 (function () {
-  // Method 1
+  // Варіант 1
   // const arr = [7, 8, 1, 3, 8, 7, 9, 3];
   // const sorted = arr.sort((a, b) => {
   //   if (a > b) return 1;
@@ -956,7 +991,7 @@
   //   return 0
   // });
 
-  // Method 2
+  // Варіант 2
   const arr = [7, 8, 1, 3, 8, 7, 9, 3];
   const sorted = arr.sort((a, b) => a-b); // a-b -> asc, b-a ->desc
 
@@ -965,23 +1000,25 @@
 
 
 
-// Завдання: парсинг url.
-// Маємо url рядок такого типу:
-// "user.name.fristname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue&experiments.theme=dark"
-//
-// Напишіть функцію яка повертає цей рядок в такому вигляді:
-// // {
-// //   user: {
-// //     name: {
-// //       fristname: "Bob",
-// //       lastname: "Smith"
-// //     },
-// //     favoritecolor: "Light Blue"
-// //   },
-// //   experiments: {
-// //     theme: "dark"
-// //   }
-// // }
+/*
+  Завдання: парсинг url.
+  Маємо url рядок такого типу:
+    "user.name.fristname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue&experiments.theme=dark"
+
+  Напишіть функцію яка повертає цей рядок в такому вигляді:
+  // {
+  //   user: {
+  //     name: {
+  //       fristname: "Bob",
+  //       lastname: "Smith"
+  //     },
+  //     favoritecolor: "Light Blue"
+  //   },
+  //   experiments: {
+  //     theme: "dark"
+  //   }
+  // }
+*/
 (function () {
   const inData = "user.name.fristname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue&experiments.theme=dark";
 
@@ -1036,10 +1073,12 @@
 
 
 
-// Знайти щасливе число. Щасливе число те яке в рядку зустрічається скільки разів
-// скільки ж і є це саме число. Тобто із числа/рядка 221333 щасливе число є 3.
-// Якщо декілька щасливих чисел, то повернути найбільше, якщо немає щасливого
-// числа, то повернути нуль.
+/*
+  Завдання: знайти щасливе число.
+  Щасливе число те яке в рядку зустрічається скільки разів скільки ж і є це саме число. Тобто із числа/рядка 221333
+  щасливе число є 3. Якщо декілька щасливих чисел, то повернути найбільше, якщо немає щасливого числа, то повернути
+  нуль.
+*/
 (function () {
   function findLucky(numbers) {
     if (typeof numbers === "number") numbers = String(numbers);
@@ -1069,7 +1108,7 @@
 
 
 
-// Ланцюжок викликів.
+// Завдання: ланцюжок викликів.
 (function () {
   let ladder = {
     step: 0,
@@ -1092,7 +1131,7 @@
 
 
 
-// Поміняти місцями два значення.
+// Завдання: поміняти місцями два значення.
 (function () {
   // 1. Використання тимчасової змінної
   function swapWithTemp(num1, num2) {
@@ -1122,7 +1161,7 @@
 
 
 
-// Замикання (Closures) (Каррінг).
+// Завдання: реалізувати замикання (Closures) (Carrying).
 (function () {
   function sum(num) {
     let result = 0;
@@ -1144,13 +1183,15 @@
 
 
 
-// Чи однакові символи в рядках?
-// dog dgo -> true
-// dog dfo -> false
-// doog ddog -> false
+/*
+  Завдання: чи однакові символи в рядках?
+  dog dgo -> true
+  dog dfo -> false
+  doog ddog -> false
+*/
 (function () {
   const isOrder = (firstString, secondString) => {
-    // Variant 1
+    // Варіант 1
     // if (firstString.length !== secondString.length) return false;
 
     // const firstReduce = [...firstString].reduce((accumulator, currentValue) => {
@@ -1163,7 +1204,7 @@
 
     // return firstReduce === seconsdReduce;
 
-    // Variant 2
+    // Варіант 2
     const letters1 = [...firstString].sort();
     const letters2 = [...secondString].sort();
 
@@ -1177,7 +1218,7 @@
 
 
 
-// Реалізувати flatten метод.
+// Завдання: реалізувати flatten метод.
 (function () {
   function flatten(array) {
     let result = [];
@@ -1202,7 +1243,7 @@
 
 
 
-// Remove dupes characters in a string.
+// Завдання: видалити повторювані символи в рядку.
 (function () {
   function removeDupes(str) {
     return [...new Set(str)].join('');
@@ -1214,7 +1255,7 @@
 
 
 
-// Що буде виведено?
+// Завдання: що буде виведено?
 (function () {
   const length = 4;
   const numbers = [];
@@ -1228,7 +1269,7 @@
 
 
 
-// Знайти найвигідніший день купівлі та продажу зерна.
+// Завдання: знайти найвигідніший день купівлі та продажу зерна.
 (function () {
   function findProfit(prices) {
     if (!(Array.isArray(prices)
@@ -1276,7 +1317,7 @@
 
 
 
-// Реалізувати затримку для виклику функцій.
+// Завдання: реалізувати затримку для виклику функцій.
 (function () {
   function someFn() {
     console.log(arguments);
@@ -1298,7 +1339,7 @@
 
 
 
-// Порахувати вершини дерева.
+// Завдання: порахувати вершини дерева.
 (function () {
   const binaryTree = {
     value: 1,
@@ -1327,9 +1368,9 @@
 
 
 
-// Створити сounter.
+// Завдання: створити counter.
 (function () {
-  // Method 1:
+  // Варіант 1:
   function createCounter() {
     let count = 0;
 
@@ -1357,7 +1398,7 @@
   console.log(result.count); // 0
   console.log(result.getCount()); // 2
 
-  // Method 2:
+  // Варіант 2:
   const createId = () => {
     let id = 0;
 
@@ -1373,7 +1414,7 @@
 
 
 
-// Memorization.
+// Завдання: memorization.
 (function () {
   // Without memo
   const clumsysquareWithoutMemo = (num) => {
@@ -1437,7 +1478,7 @@
 
 
 
-// Написати функцію sleep, яка зупиняє виконання коду на визначений час.
+// Завдання: написати функцію sleep, яка зупиняє виконання коду на визначений час.
 (function () {
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -1454,8 +1495,10 @@
 
 
 
-// Реалізувати свій forEach, filter, map, reduce.
-// https://medium.com/swlh/how-to-write-your-own-reduce-filter-and-map-methods-in-javascript-9b1498a48e53
+/*
+  Завдання: реалізувати свій forEach, filter, map, reduce.
+  https://medium.com/swlh/how-to-write-your-own-reduce-filter-and-map-methods-in-javascript-9b1498a48e53
+*/
 (function () {
   let arr = [1, 2, 3];
   arr[10] = 10;
@@ -1465,8 +1508,8 @@
     if (this == null) {
       throw new Error("Cant iterate over undefined or null");
     }
-    let context = this;
 
+    let context = this;
     let O = Object(this);
 
     if (arguments.length > 1) {
@@ -1478,7 +1521,6 @@
     }
 
     let len = O.length;
-
     let i = 0;
 
     while (i < len) {
@@ -1512,7 +1554,6 @@
     }
 
     let context = this;
-
     let O = Object(this);
 
     if (arguments.length > 1) {
@@ -1524,12 +1565,12 @@
     }
 
     let len = O.length;
-
     let res = [];
 
     for (let i = 0; i < len; i++) {
       if (i in O) {
         let current = this[i];
+
         if (callback.call(context, current, i, O)) {
           res.push(current);
         }
@@ -1553,8 +1594,8 @@
     if (this == null) {
       throw new Error("Cant iterate over undefined or null");
     }
-    let context = this;
 
+    let context = this;
     let O = Object(this);
 
     if (arguments.length > 1) {
@@ -1566,9 +1607,7 @@
     }
 
     let len = O.length;
-
     let newArray = [];
-
     let i = 0;
 
     while (i < len) {
@@ -1624,9 +1663,11 @@
   function add(a, b) {
     return a + b;
   }
+
   function subtract(a, b) {
     return a - b;
   }
+
   function concatenate(a, b) {
     return a.concat(b);
   }
@@ -1644,11 +1685,14 @@
       i = 1;
       result = this[0];
     }
+
     for (; i < this.length; i++) {
       result = f(result, this[i], i, this);
     }
+
     return result;
   };
+
   let a = [1, 2, 3, 4];
 
   console.log(a.reduce(add), a.reduce2(add));
@@ -1677,6 +1721,7 @@
       if (len === 0) {
         throw new Error("Reduce of empty array with no initial value");
       }
+
       result = O[i];
       i++;
     }
@@ -1696,14 +1741,14 @@
 
 
 
-// Реалізувати власний reduce.
+// Завдання: реалізувати власний reduce.
 (function () {
   var a = [10, 21, 13, 56];
 
   function add(a, b) { return a + b }
   function foo(a, b) { return a.concat(b) }
 
-  // Variant 1
+  // Варіант 1
   Array.prototype.reduce2 = function (f, result) {
     var i = 0;
     if (arguments.length < 2) {
@@ -1716,7 +1761,7 @@
     return result;
   };
 
-  // Variant 2
+  // Варіант 2
   Array.prototype.myReduce = function(callback){
     var a = 0;
 
@@ -1737,7 +1782,7 @@
 
 
 
-// Знайти найбільший і найменший елемент у масиві, не використовуючи Math.max і Math.min.
+// Завдання: знайти найбільший і найменший елемент у масиві, не використовуючи Math.max і Math.min.
 (function () {
   function findMinMax(arr) {
     let min = arr[0];
@@ -1756,7 +1801,6 @@
     return { min, max };
   }
 
-
   const numbers = [5, 1, 3, 412, 12, 512];
   const result = findMinMax(numbers);
 
@@ -1766,8 +1810,10 @@
 
 
 
-// Обробка даних у масиві певним чином із рішенням O(n).
-// Необхідно обробити масив таким чином, щоб розподілити людей за групами міст.
+/*
+  Завдання: необхідно обробити масив таким чином, щоб розподілити людей за групами міст.
+  Обробка даних у масиві певним чином із рішенням O(n).
+*/
 (function () {
   const people = [
     {
@@ -1811,7 +1857,7 @@
 
 
 
-// Об'єднання інтервалів у масиві.
+// Завдання: об'єднання інтервалів у масиві.
 (function () {
   const array1 = [[1, 3], [2, 6], [8, 10], [15, 18]]; // [[1, 6], [8, 10], [15, 18]]
   const array2 = [[1, 4], [4, 5]]; // [[1, 5]]
@@ -1844,7 +1890,7 @@
 
 
 
-// Перетворення об'єкта.
+// Завдання: перетворення об'єкта.
 (function () {
   // Об'єкт на вхід
   const object = {
@@ -1900,9 +1946,11 @@
 
 
 
-// Напишіть функцію flattenObject(obj), яка приймає як аргумента вкладений об'єкт obj і повертає новий
-// об'єкт, в якому всі властивості об'єкта obj "розгладжені" (перетворені в однорівневу структуру), з
-// використанням точкової нотації для подання ієрархії властивостей.
+/*
+  Завдання: напишіть функцію flattenObject(obj), яка приймає як аргумент вкладений об'єкт obj і повертає новий
+  об'єкт, в якому всі властивості об'єкта obj "розгладжені" (перетворені в однорівневу структуру), з використанням
+  точкової нотації для подання ієрархії властивостей.
+*/
 (function () {
   const obj = {
     a: {
@@ -1946,8 +1994,10 @@
 
 
 
-// Перевірити, чи є заданий рядок паліндромом. Додамо умову, яка ігноруватиме символи пробілу,
-// розділових знаків тощо. Також будемо ігнорувати регістр.
+/*
+  Завдання: перевірити, чи є заданий рядок паліндромом. Додамо умову, яка ігноруватиме символи пробілу,
+  розділових знаків тощо. Також будемо ігнорувати регістр.
+*/
 (function () {
   const isEqual = (str1 = '', str2 = '') => {
     return str1.toLowerCase() === str2.toLowerCase()
@@ -1995,7 +2045,7 @@
 
 
 
-// Перетворити рядок на об'єкт, розділяючи властивості по крапці.
+// Завдання: перетворити рядок на об'єкт, розділяючи властивості по крапці.
 (function () {
   const str = 'one.two.three.four.five';
   const arrStr = str.split('.')
@@ -2008,7 +2058,7 @@
 
 
 
-// Перевірити, чи є задане число простим.
+// Завдання: перевірити, чи є задане число простим.
 (function () {
   function isPrime(number) {
     if (number <= 1) {
@@ -2032,7 +2082,7 @@
 
 
 
-// Обчислити факторіал заданого числа.
+// Завдання: обчислити факторіал заданого числа.
 (function () {
   function factorial(n) {
     if (n === 0 || n === 1) {
@@ -2056,7 +2106,7 @@
 
 
 
-// Знайти суму всіх чисел у заданому діапазоні.
+// Завдання: знайти суму всіх чисел у заданому діапазоні.
 (function () {
   function sumRange(start, end) {
     const count = end - start + 1;
@@ -2072,7 +2122,7 @@
 
 
 
-// Реалізувати рекурсивну функцію для обчислення чисел Фібоначчі.
+// Завдання: реалізувати рекурсивну функцію для обчислення чисел Фібоначчі.
 (function () {
   function fibonacci(n, cache = {}) {
     if (n in cache) {
@@ -2120,7 +2170,7 @@
 
 
 
-// Розгорнути вкладені масиви за допомогою рекурсії.
+// Завдання: розгорнути вкладені масиви за допомогою рекурсії.
 (function () {
   function flattenArray(arr) {
     const stack = [...arr];
@@ -2145,8 +2195,10 @@
 
 
 
-// Реалізувати власні методи map, filter, reduce. Необхідно зберегти всі ті можливості, що
-// є у нативних методів: звернення через крапку, отримання всіх необхідних аргументів.
+/*
+  Завдання: реалізувати власні методи map, filter, reduce. Необхідно зберегти всі ті можливості, що
+  є у нативних методів: звернення через крапку, отримання всіх необхідних аргументів.
+*/
 (function () {
   Array.prototype.myFilter = function(callback) {
     const result = []
@@ -2203,11 +2255,13 @@
 
 
 
-// Написати власні функції debounce і throttle.
+/*
+  Завдання: написати власні функції debounce і throttle.
 
-// Debounce очікує певний час перед повторним викликом функції. Throttle обмежує кількість викликів
-// функції протягом певного періоду. Гарантує, що функція викликається лише один раз, навіть якщо
-// подія запускається кілька разів.
+  Debounce очікує певний час перед повторним викликом функції. Throttle обмежує кількість викликів
+  функції протягом певного періоду. Гарантує, що функція викликається лише один раз, навіть якщо
+  подія запускається кілька разів.
+*/
 (function () {
   function debounce (callback, time) {
     let timeoutId = null
@@ -2266,7 +2320,7 @@
 
 
 
-// Написати функцію sleep, яка зупиняє виконання коду на певний час.
+// Завдання: написати функцію sleep, яка зупиняє виконання коду на певний час.
 (function () {
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -2372,14 +2426,14 @@
 
 
 
-// Floating problem.
+// Хитрість: floating problem.
 (function () {
   console.log(0.1 + 0.2 === 0.3);
 });
 
 
 
-// Function arrow context.
+// Хитрість: function arrow context.
 (function () {
   function User(name, age) {
     this.name = name;
@@ -2405,7 +2459,7 @@
 
 
 
-// Function context.
+// Хитрість: function context.
 (function () {
   function User(name, age) {
     this.name = name;
@@ -2431,7 +2485,7 @@
 
 
 
-// Function expression.
+// Хитрість: function expression.
 (function () {
   var y = 1;
 
@@ -2444,7 +2498,7 @@
 
 
 
-// Function hoisted.
+// Хитрість: function hoisted.
 (function () {
   var car = new Vehicle("Honda", "white", "2010", "UK");
 
@@ -2460,7 +2514,7 @@
 
 
 
-// Function without new.
+// Хитрість: function without new.
 (function () {
   function Vehicle(model, color, year, country) {
     this.model = model;
@@ -2476,7 +2530,7 @@
 
 
 
-// Semicolon issue.
+// Хитрість: semicolon issue.
 (function () {
   function foo() {
     return
@@ -2490,14 +2544,14 @@
 
 
 
-// Find Duplicate Elements in an Array.
+// Завдання: знайти дублікати в масиві.
 (function () {
-  // Variant 1. Using the indexOf() method
+  // Варіант 1. Using the indexOf() method
   // const array = [1, 2, 3, 2, 4, 5, 4, 5];
   // const duplicates = array.filter((item, index) => array.indexOf(item) !== index);
   // console.log(duplicates); // [2, 4, 5]
 
-  // Variant 2. Using Set() object and has() Method
+  // Варіант 2. Using Set() object and has() Method
   // const array = [1, 2, 3, 2, 4, 5, 4, 5];
   // const uniqueElements = new Set();
   // const duplicates = [];
@@ -2512,7 +2566,7 @@
 
   // console.log(duplicates); // [2, 4, 5]
 
-  // Variant 3. Using an object
+  // Варіант 3. Using an object
   // const array = [1, 2, 3, 2, 4, 5, 4, 5];
   // const elementTracker = {};
   // const duplicates = [];
@@ -2527,13 +2581,13 @@
 
   // console.log(duplicates); // [2, 4, 5]
 
-  // Variant 4. Using some function
+  // Варіант 4. Using some function
   // const array = [1, 2, 3, 2, 4, 5, 4, 5];
   // const duplicates = array.filter((item, index) => array.some((elem, idx) => elem === item && idx !== index));
 
   // console.log(duplicates); // [2, 4, 5]
 
-  // Variant 5. Using iteration
+  // Варіант 5. Using iteration
   // const array = [1, 2, 3, 2, 4, 5, 4, 5];
   // let duplicates = [];
 
@@ -2550,12 +2604,12 @@
 
   // console.log(duplicates); // [2, 4, 5]
 
-  // Variant 6. Using the filter() and indexOf() Methods
+  // Варіант 6. Using the filter() and indexOf() Methods
   // const array = [1, 2, 3, 2, 4, 5, 4, 5];
   // const duplicates = array.filter((item, index) => array.indexOf(item) !== index);
   // console.log(duplicates); // [2, 4, 5]
 
-  // Variant 7. Using Nested For In Loop
+  // Варіант 7. Using Nested For In Loop
   // const array = [1, 2, 3, 2, 4, 5, 4, 5];
   // let duplicates = [];
 
@@ -2573,7 +2627,7 @@
 
   // console.log(duplicates); // [2, 4, 5]
 
-  // Variant 8. Comparing the indexes of element
+  // Варіант 8. Comparing the indexes of element
   // const array = [1, 2, 3, 2, 4, 5, 4, 5];
   // const duplicates = [];
 
@@ -2585,13 +2639,13 @@
 
   // console.log(duplicates); // [2, 4, 5]
 
-  // Variant 9. Using filter() Method
+  // Варіант 9. Using filter() Method
   // const array = [1, 2, 3, 2, 4, 5, 4, 5];
   // const duplicates = array.filter((item, index) => array.indexOf(item) < index);
 
   // console.log(duplicates); // [2, 4, 5]
 
-  // Variant 10. Using a Set
+  // Варіант 10. Using a Set
   const array = [1, 2, 3, 2, 4, 5, 4, 5];
   const uniqueSet = new Set(array);
   const duplicates = array.filter(item => {
@@ -2658,6 +2712,92 @@
   console.log(findShort("test the")); // 3
   console.log(findShort("test number")); // 4
   console.log(findShort("a short")); // 1
+});
+
+
+
+// Завдання: що буде виведено?
+(function () {
+  const shape = {
+    radius: 10,
+    diameter() {
+      return this.radius * 2;
+    },
+    perimeter: () => 2 * Math.PI * this.radius
+  };
+
+  console.log(shape.diameter()); // 20
+  console.log(shape.perimeter()); // NaN
+});
+
+
+
+// Завдання: що буде виведено?
+(function () {
+  function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  const member = new Person("Example1", "Example2");
+
+  Person.getFullName = function () {
+    return ${this.firstName} ${this.lastName};
+  }
+
+  console.log(member.getFullName()); // Error: member.getFullName is not a function.
+  // Right: Person.prototype.getFullNam = function () {...};
+});
+
+
+
+// Завдання: що буде виведено?
+(function () {
+  const firstPromise = new Promise((resolve, reject) => {
+    setTimeout(resolve, 500, 'One');
+  });
+
+  const secondPromise = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100, 'Two');
+  });
+
+  Promise.all([firstPromise, secondPromise]).then((response) => console.log(response)); // ['One', 'Two']
+  Promise.race([firstPromise, secondPromise]).then((response) => console.log(response)); // 'Two'
+});
+
+
+
+// Завдання: що буде виведено?
+(function () {
+  async function getData() {
+    return await Promise.resolve("I made it!");
+  }
+
+  const data = getData();
+  console.log(data); // Promise.pending
+});
+
+
+
+// ...
+(function () {
+  const myPromise = Promise.resolve("Wooh some cool data.");
+
+  (async () => {
+    try {
+      console.log(await myPromise);
+    } catch {
+      throw new Error("Oops didn't work.'");
+    } finally {
+      console.log("Oh finally!")
+    }
+  })();
+
+  /*
+    On console:
+      "Wooh some cool data."
+      "Oh finally!"
+  */
 });
 
 
