@@ -819,7 +819,7 @@
 
 
 /*
-  Завдання: універсальна сума (carrying).
+  Завдання: універсальна сума (currying).
   Напишіть функцію, що складає 2 числа. Працювати функція повинна як показано на прикладах.
 */
 (function () {
@@ -1161,7 +1161,7 @@
 
 
 
-// Завдання: реалізувати замикання (Closures) (Carrying).
+// Завдання: реалізувати замикання (Closures) (Currying).
 (function () {
   function sum(num) {
     let result = 0;
@@ -2798,6 +2798,37 @@
       "Wooh some cool data."
       "Oh finally!"
   */
+});
+
+
+
+// Завдання: просумувати масив
+(function () {
+  // Варіант 1
+  const array = [1, 1, [1, [1, 2], 1], [1]]
+
+  const sum1 = (arr) => {
+    return arr.reduce((accumulator, currentValue) => {
+      if (Array.isArray(currentValue)) {
+        return accumulator + sum(currentValue)
+      } else if (typeof currentValue === "number") {
+        return accumulator + currentValue
+      }
+
+      return accumulator
+    }, 0)
+  }
+
+  console.log(sum1(array)) // 8
+
+  // Варіант 2
+  const sum2 = (arr) => {
+    const flated = arr.flat(Infinity)
+
+    return flated.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+  }
+
+  console.log(sum2(array)) // 8
 });
 
 

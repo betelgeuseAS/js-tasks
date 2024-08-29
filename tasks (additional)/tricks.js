@@ -794,6 +794,67 @@
 
 
 
+// Глибоке копіювання об'єкта
+(function () {
+  const userObj = {
+    name: "String"
+  }
+  const original = {
+    map: new Map([["string1", "string2"]]),
+    set: new Set([1, 2, 1, 3]),
+    date: new Date(),
+    array: [userObj],
+    userObj
+  };
+  original.circularRef = original;
+
+  // Виконане глибоке копіювання
+  const clone = structuredClone(original);
+});
+
+
+
+// ...
+(function () {
+  var value1 = 20;
+
+  (function JustForFun() {
+    console.log('Value of the first variable' + value1); // Value of the first variable20
+    var value2 = 123;
+  })()
+
+  console.log('Value of the first variable' + value1); // Value of the first variable20
+  console.log('Value of the second variable' + value2); // Uncaught ReferenceError: value2 is not defined
+});
+
+
+
+// ...
+(function () {
+  function a(value) {
+    return true - value;
+  }
+
+  var b = a('4') + a('-4') + a(-'4') + a(4);
+  console.log(b) // "4"
+});
+
+
+
+// ...
+(function () {
+  let x = 5;
+  x = (x++, x = addFive(x), x *= 2, x -= 5, x += 10);
+
+  function addFive(num) {
+    return num + 5;
+  }
+
+  console.log(x); // 27
+})();
+
+
+
 // ...
 (function () {
 
