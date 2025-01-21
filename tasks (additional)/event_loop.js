@@ -44,7 +44,7 @@
     6. 6
     7. 4
   */
-})();
+});
 
 
 
@@ -80,7 +80,7 @@
     7. Then2
     8. Timeout2
   */
-})();
+});
 
 
 
@@ -183,6 +183,32 @@
     7. Timeout
   */
 });
+
+
+
+// Завдання: порядок виконання.
+(function () {
+  function myFunction() {
+    console.log(1);
+    setTimeout(() => {
+      console.log(2);
+    }, 1000);
+    setTimeout(() => {
+      console.log(3);
+    }, 0);
+    Promise.resolve()
+      .then(() => console.log(4))
+      .then(() => console.log(5));
+    console.log(6);
+  }
+
+  myFunction();
+  setTimeout(() => {
+    console.log(7);
+  }, 100);
+
+  // 1 6 4 5 3 7 2
+})();
 
 
 
